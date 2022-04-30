@@ -41,6 +41,8 @@
 		3B6CD137281C470900F0C531 /* ShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CD135281C470900F0C531 /* ShopViewModel.swift */; };
 		3B6CD139281C476D00F0C531 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CD138281C476D00F0C531 /* Main.storyboard */; };
 		3B6CD13B281C50A700F0C531 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CD13A281C50A700F0C531 /* Post.swift */; };
+		3B6CD13D281CE10400F0C531 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CD13C281CE10400F0C531 /* FeedViewController.swift */; };
+		3B6CD13F281CE56200F0C531 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CD13E281CE56200F0C531 /* FeedCell.swift */; };
 		8991C83110F2FE728A051C15 /* Pods_menlog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451BDEF092DA8887D807C14A /* Pods_menlog.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +83,8 @@
 		3B6CD135281C470900F0C531 /* ShopViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewModel.swift; sourceTree = "<group>"; };
 		3B6CD138281C476D00F0C531 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3B6CD13A281C50A700F0C531 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		3B6CD13C281CE10400F0C531 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		3B6CD13E281CE56200F0C531 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		451BDEF092DA8887D807C14A /* Pods_menlog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_menlog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A53164F544209FB9B25BAE1E /* Pods-menlog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-menlog.debug.xcconfig"; path = "Target Support Files/Pods-menlog/Pods-menlog.debug.xcconfig"; sourceTree = "<group>"; };
 		DC7742E78F8910002011869E /* Pods-menlog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-menlog.release.xcconfig"; path = "Target Support Files/Pods-menlog/Pods-menlog.release.xcconfig"; sourceTree = "<group>"; };
@@ -190,6 +194,7 @@
 			children = (
 				3B6CD115281C46F800F0C531 /* ShopTableViewCell.swift */,
 				3B6CD116281C46F800F0C531 /* Profile */,
+				3B6CD13E281CE56200F0C531 /* FeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 				3B6CD126281C470000F0C531 /* MainTabBarViewController.swift */,
 				3B6CD127281C470000F0C531 /* LikeViewController.swift */,
 				3B6CD128281C470000F0C531 /* MainTabViewController.swift */,
+				3B6CD13C281CE10400F0C531 /* FeedViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -389,10 +395,12 @@
 				3B6CD103281C46A600F0C531 /* HotpepperAPI.swift in Sources */,
 				3B6CD0DF281C415700F0C531 /* AppDelegate.swift in Sources */,
 				3B6CD12B281C470000F0C531 /* HomeViewController.swift in Sources */,
+				3B6CD13D281CE10400F0C531 /* FeedViewController.swift in Sources */,
 				3B6CD11C281C46F800F0C531 /* ProfileCollectionViewController.swift in Sources */,
 				3B6CD131281C470000F0C531 /* LikeViewController.swift in Sources */,
 				3B6CD10C281C46D700F0C531 /* User.swift in Sources */,
 				3B6CD12E281C470000F0C531 /* MypageViewController.swift in Sources */,
+				3B6CD13F281CE56200F0C531 /* FeedCell.swift in Sources */,
 				3B6CD110281C46E300F0C531 /* FirebaseStorage.swift in Sources */,
 				3B6CD0E1281C415700F0C531 /* SceneDelegate.swift in Sources */,
 			);
