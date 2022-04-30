@@ -2,6 +2,26 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Privacy - Photo Library Usage Description (library)
+Privacy - Photo Library Usage Description (library)
+Privacy - Photo Library Usage Description (library)
+Privacy - Photo Library Usage Description (library)
+Privacy - Photo Library Usage Description (library)
+Privacy - Photo Library Usage Description (library)
+Privacy - Photo Library Usage Description (library)
+Privacy - Photo Library Usage Description (library)
+Privacy - Photo Library Usage Description (library)
+Privacy - Photo Library Usage Description (library)
+Privacy - Photo Library Usage Description (library)
+Privacy - Photo Library Usage Description (library)
+</key>
+	<string>フォトライブラリの利用を許可しますか？</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>フォトライブラリの利用を許可しますか？</string>
+	<key>Privacy – Photo Library Usage Description</key>
+	<string>ラーメンを投稿するためにカメラのアクセスを許可しますか？</string>
+	<key>NSCameraUsageDescription</key>
+	<string>ラーメンを投稿するためにカメラのアクセスを許可しますか？</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
