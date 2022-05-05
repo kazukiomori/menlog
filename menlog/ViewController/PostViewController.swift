@@ -7,12 +7,15 @@
 
 import UIKit
 import YPImagePicker
+import Firebase
 
 class PostViewController: UIViewController{
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var shopNameTextField: UITextField!
+    @IBOutlet weak var shopnameTextField: UITextField!
     @IBOutlet weak var captionTextField: UITextField!
+    
+    var currentUser = Auth.auth().currentUser
     
     private let maxTextLength = 50
     override func viewDidLoad() {
@@ -21,16 +24,20 @@ class PostViewController: UIViewController{
             let defaultImage = UIImage(named: "ラーメン")
             imageView.image = defaultImage
         }
-        shopNameTextField.delegate = self
+        shopnameTextField.delegate = self
         captionTextField.delegate = self
+        
+        
     }
     
     func didFinishPickingMedia (_ picker: YPImagePicker) {
+//        guard let viewModel = viewModel else { return }
         picker.didFinishPicking { items, _ in
             picker.dismiss(animated: true, completion: nil)
             
             guard let selectedImage = items.singlePhoto?.image else {return}
             self.imageView.image = selectedImage
+            
         }
     }
     
@@ -38,10 +45,13 @@ class PostViewController: UIViewController{
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func tappedPostButton(_ sender: Any) {
-        guard let shopName = shopNameTextField.text else {return}
-        guard let caption = captionTextField.text else {return}
-        guard let image = imageView.image else {return}
-        PostService.uploadePost(shopName: shopName, caption: caption, image: image) { error in
+        guard let shopname = shopnameTextField.text else { return }
+        guard let caption = captionTextField.text else { return }
+        guard let image = imageView.image else { return }
+        guard let profileImageUrl = self.currentUser?.photoURL else { return }
+        guard let name =  self.currentUser?.displayName else { return }
+        
+        PostService.uploadePost(shopname: shopname, caption: caption, image: image, profileImageUrl: profileImageUrl, name: name) { error in
             if let error = error {
                 print("Faild to upload post\(error.localizedDescription)")
                 return
@@ -67,6 +77,7 @@ class PostViewController: UIViewController{
         
         didFinishPickingMedia(picker)
     }
+    
 }
 
 extension PostViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
@@ -77,11 +88,11 @@ extension PostViewController: UIImagePickerControllerDelegate, UINavigationContr
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        guard let shopName = shopNameTextField.text else { return }
+        guard let shopname = shopnameTextField.text else { return }
         guard let caption = captionTextField.text else { return }
         
-        if shopName.count > maxTextLength {
-            shopNameTextField.text = String(shopName.prefix(maxTextLength))
+        if shopname.count > maxTextLength {
+            shopnameTextField.text = String(shopname.prefix(maxTextLength))
         }
         
         if caption.count > maxTextLength {

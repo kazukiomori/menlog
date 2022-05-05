@@ -43,6 +43,7 @@
 		3B6CD13B281C50A700F0C531 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CD13A281C50A700F0C531 /* Post.swift */; };
 		3B6CD13D281CE10400F0C531 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CD13C281CE10400F0C531 /* FeedViewController.swift */; };
 		3B6CD13F281CE56200F0C531 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CD13E281CE56200F0C531 /* FeedCell.swift */; };
+		3BDB656128237BA7000B7A8D /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDB656028237BA7000B7A8D /* PostViewModel.swift */; };
 		8991C83110F2FE728A051C15 /* Pods_menlog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451BDEF092DA8887D807C14A /* Pods_menlog.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		3B6CD13A281C50A700F0C531 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		3B6CD13C281CE10400F0C531 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		3B6CD13E281CE56200F0C531 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		3BDB656028237BA7000B7A8D /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		451BDEF092DA8887D807C14A /* Pods_menlog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_menlog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A53164F544209FB9B25BAE1E /* Pods-menlog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-menlog.debug.xcconfig"; path = "Target Support Files/Pods-menlog/Pods-menlog.debug.xcconfig"; sourceTree = "<group>"; };
 		DC7742E78F8910002011869E /* Pods-menlog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-menlog.release.xcconfig"; path = "Target Support Files/Pods-menlog/Pods-menlog.release.xcconfig"; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 			children = (
 				3B6CD134281C470900F0C531 /* ProfileHeaderViewModel.swift */,
 				3B6CD135281C470900F0C531 /* ShopViewModel.swift */,
+				3BDB656028237BA7000B7A8D /* PostViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				3B6CD10D281C46D700F0C531 /* ShopModel.swift in Sources */,
 				3B6CD12F281C470000F0C531 /* LoginViewController.swift in Sources */,
 				3B6CD113281C46EB00F0C531 /* Constants.swift in Sources */,
+				3BDB656128237BA7000B7A8D /* PostViewModel.swift in Sources */,
 				3B6CD11B281C46F800F0C531 /* ProfileCell.swift in Sources */,
 				3B6CD11D281C46F800F0C531 /* ProfileHeader.swift in Sources */,
 				3B6CD132281C470000F0C531 /* MainTabViewController.swift in Sources */,

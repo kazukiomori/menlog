@@ -414,7 +414,7 @@
                     <connections>
                         <outlet property="captionTextField" destination="IoC-TH-Lg7" id="H8R-tn-Zgs"/>
                         <outlet property="imageView" destination="Wcp-G4-iy4" id="kJ2-UE-mjg"/>
-                        <outlet property="shopNameTextField" destination="951-Mg-yST" id="G9u-5u-NJF"/>
+                        <outlet property="shopnameTextField" destination="951-Mg-yST" id="G9u-5u-NJF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oya-xT-LXs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -488,7 +488,7 @@
                                         <connections>
                                             <outlet property="shopDescription" destination="wDK-5x-bx1" id="b7s-ad-0Xn"/>
                                             <outlet property="shopImage" destination="1Hz-QO-zx7" id="ypr-ae-rTx"/>
-                                            <outlet property="shopName" destination="Xvn-Sp-9o1" id="tpJ-KU-hhT"/>
+                                            <outlet property="shopname" destination="Xvn-Sp-9o1" id="tpJ-KU-hhT"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -6,7 +6,7 @@ class ShopTableViewCell: UITableViewCell {
     private var urlString: String = ""
     
     @IBOutlet weak var shopImage: UIImageView!
-    @IBOutlet weak var shopName: UILabel!
+    @IBOutlet weak var shopname: UILabel!
     @IBOutlet weak var shopDescription: UILabel!
     
     
@@ -15,7 +15,7 @@ class ShopTableViewCell: UITableViewCell {
     }
     
     private func updateUI(name: String, `catch`: String, logoImage: URL){
-        self.shopName.text = name
+        self.shopname.text = name
         self.shopDescription.text = `catch`
         
         getImageDataFrom(url: logoImage)

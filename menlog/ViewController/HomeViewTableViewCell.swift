@@ -9,7 +9,7 @@ import UIKit
 
 class HomeViewTableViewCell: UITableViewCell {
     @IBOutlet weak var menuImageView: UIImageView!
-    @IBOutlet weak var shopName: UILabel!
+    @IBOutlet weak var shopname: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "A8DE7070-2493-419D-9F27-649BF9643654"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D28B88DE-C302-46D4-B2FE-9F09F6A83779"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "menlog/ViewController/FeedViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "collectionView(_:layout:sizeForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "421B850E-9AC7-4C8E-86FD-EB00F5AE7DBC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "menlog/ViewController/FeedViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "collectionView(_:layout:sizeForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FD06588A-8BC7-4D3B-9A7D-97AEAD7C853F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "menlog/ViewController/FeedViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "collectionView(_:layout:sizeForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5842DC26-3EA9-4B0E-930A-747CE2791A93"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "menlog/View/FeedCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "postImageView"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3A0D56A8-117A-4B1B-8505-787E3FD1AF3A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "menlog/View/FeedCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "configure()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1BB5E7CB-4EC4-4CBD-A5F7-45641132C123"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "menlog/View/FeedCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "configure()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3FB7F12E-1BB3-405C-8B72-DB2D7506C516"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "menlog/ViewController/PostViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "tappedPostButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "19475E14-E5AC-45F9-8BF2-23EBBA62085D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "menlog/ViewController/PostViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "tappedPostButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "67973637-21F0-4366-9794-A734FF8744C1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "menlog/ViewController/PostViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "tappedPostButton(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "67973637-21F0-4366-9794-A734FF8744C1 - 8cd6dd808e6793b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "menlog.PostViewController.tappedPostButton(Any) -&gt; ()"
+                  moduleName = "menlog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazukiomori/Desktop/Swift/menlog/menlog/ViewController/PostViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "2325">
+               </Location>
+               <Location
+                  uuid = "67973637-21F0-4366-9794-A734FF8744C1 - 89a4b5e1ed7fb711"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in menlog.PostViewController.tappedPostButton(Any) -&gt; ()"
+                  moduleName = "menlog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazukiomori/Desktop/Swift/menlog/menlog/ViewController/PostViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "126">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9D66F3C9-B3D7-4698-9160-F9173C4E5C9C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "menlog/ViewController/PostViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "didFinishPickingMedia(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E5FA9208-A722-459D-846E-9A0581B35044"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "menlog/ViewController/PostViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "didFinishPickingMedia(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E5FA9208-A722-459D-846E-9A0581B35044 - 710ce7fe5ee2c3d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "menlog.PostViewController.didFinishPickingMedia(YPImagePicker.YPImagePicker) -&gt; ()"
+                  moduleName = "menlog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazukiomori/Desktop/Swift/menlog/menlog/ViewController/PostViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "111">
+               </Location>
+               <Location
+                  uuid = "E5FA9208-A722-459D-846E-9A0581B35044 - f3e73a0d3c121e29"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;YPImagePicker.YPMediaItem&gt;, Swift.Bool) -&gt; () in menlog.PostViewController.didFinishPickingMedia(YPImagePicker.YPImagePicker) -&gt; ()"
+                  moduleName = "menlog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazukiomori/Desktop/Swift/menlog/menlog/ViewController/PostViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "146">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "53205722-62CD-428A-B2E0-F071A995650F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "menlog/View/FeedCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "viewModel"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "53205722-62CD-428A-B2E0-F071A995650F - d439838622f8d1bc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "menlog.FeedCell.viewModel.getter : Swift.Optional&lt;menlog.PostViewModel&gt;"
+                  moduleName = "menlog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazukiomori/Desktop/Swift/menlog/menlog/View/FeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "413">
+               </Location>
+               <Location
+                  uuid = "53205722-62CD-428A-B2E0-F071A995650F - 66ee224fcb96af88"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "menlog.FeedCell.viewModel.setter : Swift.Optional&lt;menlog.PostViewModel&gt;"
+                  moduleName = "menlog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazukiomori/Desktop/Swift/menlog/menlog/View/FeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "566">
+               </Location>
+               <Location
+                  uuid = "53205722-62CD-428A-B2E0-F071A995650F - 99e8263d67fd598f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "menlog.FeedCell.viewModel.modify : Swift.Optional&lt;menlog.PostViewModel&gt;"
+                  moduleName = "menlog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazukiomori/Desktop/Swift/menlog/menlog/View/FeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "53205722-62CD-428A-B2E0-F071A995650F - 7fedc9a8f86a587"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "menlog.FeedCell.viewModel.modify : Swift.Optional&lt;menlog.PostViewModel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "menlog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazukiomori/Desktop/Swift/menlog/menlog/View/FeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "10">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BF0B5346-386B-4A58-BD6B-DDB48E8093DF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "menlog/ViewController/PostViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "tappedPostButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "00FDD2F2-E7E0-424F-8AC8-A3897BDB87E8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "menlog/ViewController/PostViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "PostViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "00FDD2F2-E7E0-424F-8AC8-A3897BDB87E8 - 16901a60c82c3594"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "menlog.PostViewController.currentUser.getter : Swift.Optional&lt;__C.FIRUser&gt;"
+                  moduleName = "menlog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazukiomori/Desktop/Swift/menlog/menlog/ViewController/PostViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "126">
+               </Location>
+               <Location
+                  uuid = "00FDD2F2-E7E0-424F-8AC8-A3897BDB87E8 - 57a4fcb549a66980"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "menlog.PostViewController.currentUser.setter : Swift.Optional&lt;__C.FIRUser&gt;"
+                  moduleName = "menlog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazukiomori/Desktop/Swift/menlog/menlog/ViewController/PostViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "00FDD2F2-E7E0-424F-8AC8-A3897BDB87E8 - e01256ec6509953f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "menlog.PostViewController.currentUser.modify : Swift.Optional&lt;__C.FIRUser&gt;"
+                  moduleName = "menlog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazukiomori/Desktop/Swift/menlog/menlog/ViewController/PostViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "00FDD2F2-E7E0-424F-8AC8-A3897BDB87E8 - 2f948ec06b5a8920"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "menlog.PostViewController.currentUser.modify : Swift.Optional&lt;__C.FIRUser&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "menlog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazukiomori/Desktop/Swift/menlog/menlog/ViewController/PostViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  uuid = "00FDD2F2-E7E0-424F-8AC8-A3897BDB87E8 - b4aa179d6dfeae6d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "menlog.PostViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; menlog.PostViewController"
+                  moduleName = "menlog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazukiomori/Desktop/Swift/menlog/menlog/ViewController/PostViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "389">
+               </Location>
+               <Location
+                  uuid = "00FDD2F2-E7E0-424F-8AC8-A3897BDB87E8 - 4ec8ce555a3e3e1e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "menlog.PostViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;menlog.PostViewController&gt;"
+                  moduleName = "menlog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazukiomori/Desktop/Swift/menlog/menlog/ViewController/PostViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "333">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A0356071-FD75-4C20-9139-DBF5157E6CF5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "menlog/ViewController/PostViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "PostViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "A0356071-FD75-4C20-9139-DBF5157E6CF5 - b4aa179d6dfeae2f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "menlog.PostViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; menlog.PostViewController"
+                  moduleName = "menlog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazukiomori/Desktop/Swift/menlog/menlog/ViewController/PostViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "525">
+               </Location>
+               <Location
+                  uuid = "A0356071-FD75-4C20-9139-DBF5157E6CF5 - 4ec8ce555a3e3e5c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "menlog.PostViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;menlog.PostViewController&gt;"
+                  moduleName = "menlog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazukiomori/Desktop/Swift/menlog/menlog/ViewController/PostViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "469">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "39943E45-A621-4AA7-8676-A6DDE8120307"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "menlog/ViewController/PostViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "tappedPostButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -10,6 +10,9 @@ import UIKit
 class FeedViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    private var posts = [Post]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -17,17 +20,36 @@ class FeedViewController: UIViewController {
         collectionView.delegate = self
         
         collectionView.register(FeedCell.self, forCellWithReuseIdentifier: "FeedCell")
+        
+        fetchPost()
+        
+        let refresher = UIRefreshControl()
+        refresher.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
+        collectionView.refreshControl = refresher
     }
     
+    func fetchPost() {
+        PostService.fetchPosts { posts in
+            self.posts = posts
+            self.collectionView.refreshControl?.endRefreshing()
+            self.collectionView.reloadData()
+        }
+    }
+    
+    @objc func handleRefresh() {
+        posts.removeAll()
+        fetchPost()
+    }
 }
 
 extension FeedViewController:  UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return posts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeedCell", for: indexPath) as! FeedCell
+        cell.viewModel = PostViewModel(post: posts[indexPath.row])
         return cell
     }
     
@@ -37,6 +59,12 @@ extension FeedViewController:  UICollectionViewDelegate, UICollectionViewDataSou
 extension FeedViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (view.frame.width - 50), height: 200)
+        
+        let width = view.frame.width
+        var height = width + 8 + 40 + 8
+        height += 50
+        height += 60
+        
+        return CGSize(width: width, height: width)
     }
 }
