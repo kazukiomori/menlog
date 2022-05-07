@@ -55,7 +55,6 @@ class ProfileHeader: UICollectionReusableView {
         let label = UILabel()
         label.numberOfLines = 0
         label.textAlignment = .center
-        label.attributedText = attributedStatText(value: 1, label: "post")
         return label
     }()
     
@@ -63,7 +62,6 @@ class ProfileHeader: UICollectionReusableView {
         let label = UILabel()
         label.numberOfLines = 0
         label.textAlignment = .center
-        label.attributedText = attributedStatText(value: 1, label: "follower")
         return label
     }()
     
@@ -71,7 +69,6 @@ class ProfileHeader: UICollectionReusableView {
         let label = UILabel()
         label.numberOfLines = 0
         label.textAlignment = .center
-        label.attributedText = attributedStatText(value: 1, label: "following")
         return label
     }()
     
@@ -95,8 +92,7 @@ class ProfileHeader: UICollectionReusableView {
         
         addSubview(stack)
         stack.centerY(inView: profileImageView)
-        stack.anchor(left: profileImageView.rightAnchor, right: rightAnchor,
-                     paddingLeft: 12, paddingRight: 12, height: 50)
+        stack.anchor(left: profileImageView.rightAnchor, right: rightAnchor,width: 100, height: 50)
     }
     
     required init?(coder: NSCoder) {
@@ -119,6 +115,10 @@ class ProfileHeader: UICollectionReusableView {
         editUserProfileButton.setTitle(viewModel.followButtonText, for: .normal)
         editUserProfileButton.setTitleColor(viewModel.followButtonTextColor, for: .normal)
         editUserProfileButton.backgroundColor = viewModel.followButtonBackgroundColor
+        
+        postLabel.attributedText = viewModel.numberOfPosts
+        followersLabel.attributedText = viewModel.numberOfFollowers
+        followingLabel.attributedText = viewModel.numberOfFollowing
     }
     
     func attributedStatText(value: Int, label: String) -> NSAttributedString {

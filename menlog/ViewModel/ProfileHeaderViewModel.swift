@@ -20,9 +20,9 @@ struct ProfileHeaderViewModel {
     
     var followButtonText: String {
         if user.isCurrentUser {
-            return "Edit Profile"
+            return "設定"
         }
-        return user.isFollowed ? "Following" : "Follow"
+        return user.isFollowed ? "フォロー中" : "フォローする"
     }
     
     var followButtonBackgroundColor: UIColor {
@@ -33,7 +33,25 @@ struct ProfileHeaderViewModel {
         return user.isCurrentUser ? .black : .white
     }
     
+    var numberOfFollowers: NSAttributedString {
+        return attributedStatText(value: user.stats.followers, label: "フォロワー")
+    }
+    
+    var numberOfFollowing: NSAttributedString {
+        return attributedStatText(value: user.stats.following, label: "フォロー")
+    }
+    
+    var numberOfPosts: NSAttributedString {
+        return attributedStatText(value: user.stats.posts, label: "投稿数")
+    }
+    
     init(user: User) {
         self.user = user
+    }
+    
+    func attributedStatText(value: Int, label: String) -> NSAttributedString {
+        let attributedText = NSMutableAttributedString(string: "\(value)\n", attributes: [.font: UIFont.boldSystemFont(ofSize: 14)])
+        attributedText.append(NSAttributedString(string: label, attributes: [.font: UIFont.boldSystemFont(ofSize: 14), .foregroundColor: UIColor.lightGray]))
+        return attributedText
     }
 }

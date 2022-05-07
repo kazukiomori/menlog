@@ -14,9 +14,11 @@ class MypageViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+
     var user:User? {
         didSet { collectionView.reloadData() }
     }
+    private var posts = [Post]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +34,8 @@ class MypageViewController: UIViewController {
                                                            action: #selector(handleLogout))
         collectionView.register(ProfileCell.self, forCellWithReuseIdentifier: "ProfileCell")
         collectionView.register(ProfileHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "ProfileHeader")
-        
+        fetchPost()
+        fetchUserStats()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,6 +47,14 @@ class MypageViewController: UIViewController {
             self.user = user
             self.navigationItem.title = user.name
             self.checkIfUserIsFollowed()
+        }
+    }
+    
+    func fetchUserStats() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        UserService.fetchUserStats(uid: uid) { stats in
+            self.user?.stats = stats
+            self.collectionView.reloadData()
         }
     }
     
@@ -66,18 +77,24 @@ class MypageViewController: UIViewController {
             self.collectionView.reloadData()
         }
     }
+    
+    func fetchPost() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        PostService.fetchPosts(forUser: uid) { posts in
+            self.posts = posts
+            self.collectionView.reloadData()
+        }
+    }
 }
 
 extension MypageViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
+        return posts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileCell", for: indexPath)
-//        let imageView = cell.contentView.viewWithTag(1) as! UIImageView
-//        let cellImage = UIImage(named: "ラーメン")
-//        imageView.image = cellImage
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileCell", for: indexPath) as! ProfileCell
+        cell.viewModel = PostViewModel(post: posts[indexPath.row])
         return cell
     }
     
@@ -90,6 +107,12 @@ extension MypageViewController: UICollectionViewDelegate, UICollectionViewDataSo
         }
         return header
     }
+    
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let controller = FeedViewController()
+//        controller.post = posts[indexPath.row]
+//        navigationController?.pushViewController(controller, animated: true)
+//    }
 }
 
 extension MypageViewController: UICollectionViewDelegateFlowLayout {
@@ -107,8 +130,8 @@ extension MypageViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = view.frame.width - 50
-        return CGSize(width: width, height: 100)
+//        let width = view.frame.width
+        return CGSize(width: 300, height: 100)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {

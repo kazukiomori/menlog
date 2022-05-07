@@ -15,7 +15,7 @@ class PostViewController: UIViewController{
     @IBOutlet weak var shopnameTextField: UITextField!
     @IBOutlet weak var captionTextField: UITextField!
     
-    var currentUser = Auth.auth().currentUser
+    var user:User?
     
     private let maxTextLength = 50
     override func viewDidLoad() {
@@ -26,7 +26,7 @@ class PostViewController: UIViewController{
         }
         shopnameTextField.delegate = self
         captionTextField.delegate = self
-        
+        fetchUser()
         
     }
     
@@ -48,10 +48,11 @@ class PostViewController: UIViewController{
         guard let shopname = shopnameTextField.text else { return }
         guard let caption = captionTextField.text else { return }
         guard let image = imageView.image else { return }
-        guard let profileImageUrl = self.currentUser?.photoURL else { return }
-        guard let name =  self.currentUser?.displayName else { return }
+        guard let user = self.user else { return }
+//        guard let profileImageUrl = self.user?.profileImageUrl else { return }
+//        guard let name =  self.user?.name else { return }
         
-        PostService.uploadePost(shopname: shopname, caption: caption, image: image, profileImageUrl: profileImageUrl, name: name) { error in
+        PostService.uploadePost(shopname: shopname, caption: caption, image: image, user: user) { error in
             if let error = error {
                 print("Faild to upload post\(error.localizedDescription)")
                 return
@@ -76,6 +77,12 @@ class PostViewController: UIViewController{
         self.present(picker, animated: true, completion: nil)
         
         didFinishPickingMedia(picker)
+    }
+    
+    func fetchUser() {
+        UserService.fetchUser { user in
+            self.user = user
+        }
     }
     
 }

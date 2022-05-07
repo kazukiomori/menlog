@@ -14,8 +14,8 @@
             filePath = "menlog/ViewController/FeedViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "collectionView(_:layout:sizeForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "menlog/ViewController/FeedViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "collectionView(_:layout:sizeForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "menlog/ViewController/FeedViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "collectionView(_:layout:sizeForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -126,8 +126,8 @@
             filePath = "menlog/ViewController/PostViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "tappedPostButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -142,13 +142,13 @@
             filePath = "menlog/ViewController/PostViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "tappedPostButton(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "67973637-21F0-4366-9794-A734FF8744C1 - 8cd6dd808e6793b1"
+                  uuid = "67973637-21F0-4366-9794-A734FF8744C1 - 8cd6dd808e6793d0"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -158,12 +158,12 @@
                   urlString = "file:///Users/kazukiomori/Desktop/Swift/menlog/menlog/ViewController/PostViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "54"
-                  endingLineNumber = "54"
-                  offsetFromSymbolStart = "2325">
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "1496">
                </Location>
                <Location
-                  uuid = "67973637-21F0-4366-9794-A734FF8744C1 - 89a4b5e1ed7fb711"
+                  uuid = "67973637-21F0-4366-9794-A734FF8744C1 - 89a4b5e1ed7fb732"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -173,8 +173,8 @@
                   urlString = "file:///Users/kazukiomori/Desktop/Swift/menlog/menlog/ViewController/PostViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
                   offsetFromSymbolStart = "126">
                </Location>
             </Locations>
@@ -332,8 +332,8 @@
             filePath = "menlog/ViewController/PostViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "tappedPostButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -354,11 +354,11 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "00FDD2F2-E7E0-424F-8AC8-A3897BDB87E8 - 16901a60c82c3594"
+                  uuid = "00FDD2F2-E7E0-424F-8AC8-A3897BDB87E8 - b43fdf26bbcd144a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "menlog.PostViewController.currentUser.getter : Swift.Optional&lt;__C.FIRUser&gt;"
+                  symbolName = "menlog.PostViewController.user.getter : Swift.Optional&lt;menlog.User&gt;"
                   moduleName = "menlog"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kazukiomori/Desktop/Swift/menlog/menlog/ViewController/PostViewController.swift"
@@ -366,14 +366,14 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
                   endingLineNumber = "18"
-                  offsetFromSymbolStart = "126">
+                  offsetFromSymbolStart = "330">
                </Location>
                <Location
-                  uuid = "00FDD2F2-E7E0-424F-8AC8-A3897BDB87E8 - 57a4fcb549a66980"
+                  uuid = "00FDD2F2-E7E0-424F-8AC8-A3897BDB87E8 - 4ce78e6cdce059a6"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "menlog.PostViewController.currentUser.setter : Swift.Optional&lt;__C.FIRUser&gt;"
+                  symbolName = "menlog.PostViewController.user.setter : Swift.Optional&lt;menlog.User&gt;"
                   moduleName = "menlog"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kazukiomori/Desktop/Swift/menlog/menlog/ViewController/PostViewController.swift"
@@ -381,14 +381,14 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
                   endingLineNumber = "18"
-                  offsetFromSymbolStart = "164">
+                  offsetFromSymbolStart = "469">
                </Location>
                <Location
-                  uuid = "00FDD2F2-E7E0-424F-8AC8-A3897BDB87E8 - e01256ec6509953f"
+                  uuid = "00FDD2F2-E7E0-424F-8AC8-A3897BDB87E8 - 2355358eedbc3281"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "menlog.PostViewController.currentUser.modify : Swift.Optional&lt;__C.FIRUser&gt;"
+                  symbolName = "menlog.PostViewController.user.modify : Swift.Optional&lt;menlog.User&gt;"
                   moduleName = "menlog"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kazukiomori/Desktop/Swift/menlog/menlog/ViewController/PostViewController.swift"
@@ -399,11 +399,11 @@
                   offsetFromSymbolStart = "18">
                </Location>
                <Location
-                  uuid = "00FDD2F2-E7E0-424F-8AC8-A3897BDB87E8 - 2f948ec06b5a8920"
+                  uuid = "00FDD2F2-E7E0-424F-8AC8-A3897BDB87E8 - 3cf268439c2b87e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "menlog.PostViewController.currentUser.modify : Swift.Optional&lt;__C.FIRUser&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  symbolName = "menlog.PostViewController.user.modify : Swift.Optional&lt;menlog.User&gt; with unmangled suffix &quot;.resume.0&quot;"
                   moduleName = "menlog"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kazukiomori/Desktop/Swift/menlog/menlog/ViewController/PostViewController.swift"
@@ -450,7 +450,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A0356071-FD75-4C20-9139-DBF5157E6CF5"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "menlog/ViewController/PostViewController.swift"
@@ -474,7 +474,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "20"
                   endingLineNumber = "20"
-                  offsetFromSymbolStart = "525">
+                  offsetFromSymbolStart = "485">
                </Location>
                <Location
                   uuid = "A0356071-FD75-4C20-9139-DBF5157E6CF5 - 4ec8ce555a3e3e5c"
@@ -489,7 +489,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "20"
                   endingLineNumber = "20"
-                  offsetFromSymbolStart = "469">
+                  offsetFromSymbolStart = "429">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -504,8 +504,8 @@
             filePath = "menlog/ViewController/PostViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "tappedPostButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
