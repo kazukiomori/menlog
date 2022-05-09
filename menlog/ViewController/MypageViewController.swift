@@ -18,6 +18,7 @@ class MypageViewController: UIViewController {
     var user:User? {
         didSet { collectionView.reloadData() }
     }
+    
     private var posts = [Post]()
 
     override func viewDidLoad() {
@@ -62,10 +63,6 @@ class MypageViewController: UIViewController {
         do {
             try Auth.auth().signOut()
             dismiss(animated: true, completion: nil)
-//            let controller = LoginViewController()
-//            let nav = UINavigationController(rootViewController: controller)
-//            nav.modalPresentationStyle = .fullScreen
-//            self.present(nav, animated: true, completion: nil)
         } catch {
             print("Error Signout!")
         }
@@ -108,11 +105,11 @@ extension MypageViewController: UICollectionViewDelegate, UICollectionViewDataSo
         return header
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let controller = FeedViewController()
-//        controller.post = posts[indexPath.row]
-//        navigationController?.pushViewController(controller, animated: true)
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let controller = FeedViewController()
+        controller.post = posts[indexPath.row]
+        navigationController?.pushViewController(controller, animated: true)
+    }
 }
 
 extension MypageViewController: UICollectionViewDelegateFlowLayout {

@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = .white
         loginButton?.layer.cornerRadius = 10
         loginButton?.isEnabled = false
         loginButton?.backgroundColor = UIColor.rgb(red: 255, green: 221, blue: 187)

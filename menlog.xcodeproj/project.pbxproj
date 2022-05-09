@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B5C7D532826A3A900708073 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C7D522826A3A900708073 /* CommentViewController.swift */; };
+		3B5C7D552826A64000708073 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C7D542826A64000708073 /* CommentCell.swift */; };
+		3B5C7D572827F24F00708073 /* CommentInputAccesoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C7D562827F24F00708073 /* CommentInputAccesoryView.swift */; };
+		3B5C7D592828253C00708073 /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C7D582828253C00708073 /* CommentService.swift */; };
 		3B6CD0DF281C415700F0C531 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CD0DE281C415700F0C531 /* AppDelegate.swift */; };
 		3B6CD0E1281C415700F0C531 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CD0E0281C415700F0C531 /* SceneDelegate.swift */; };
 		3B6CD0E3281C415700F0C531 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CD0E2281C415700F0C531 /* ViewController.swift */; };
@@ -43,6 +47,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B5C7D522826A3A900708073 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		3B5C7D542826A64000708073 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		3B5C7D562827F24F00708073 /* CommentInputAccesoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInputAccesoryView.swift; sourceTree = "<group>"; };
+		3B5C7D582828253C00708073 /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
 		3B6CD0DB281C415700F0C531 /* menlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = menlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B6CD0DE281C415700F0C531 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B6CD0E0281C415700F0C531 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +150,7 @@
 				3B6CD0FD281C46A600F0C531 /* UserService.swift */,
 				3B6CD0FE281C46A600F0C531 /* PostService.swift */,
 				3B6CD0FF281C46A600F0C531 /* HotpepperAPI.swift */,
+				3B5C7D582828253C00708073 /* CommentService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -184,9 +193,11 @@
 		3B6CD114281C46F800F0C531 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3B6CD115281C46F800F0C531 /* ShopTableViewCell.swift */,
 				3B6CD116281C46F800F0C531 /* Profile */,
+				3B6CD115281C46F800F0C531 /* ShopTableViewCell.swift */,
 				3B6CD13E281CE56200F0C531 /* FeedCell.swift */,
+				3B5C7D542826A64000708073 /* CommentCell.swift */,
+				3B5C7D562827F24F00708073 /* CommentInputAccesoryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -210,6 +221,7 @@
 				3B6CD125281C470000F0C531 /* LoginViewController.swift */,
 				3B6CD127281C470000F0C531 /* LikeViewController.swift */,
 				3B6CD13C281CE10400F0C531 /* FeedViewController.swift */,
+				3B5C7D522826A3A900708073 /* CommentViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -364,6 +376,7 @@
 				3B6CD136281C470900F0C531 /* ProfileHeaderViewModel.swift in Sources */,
 				3B6CD108281C46CE00F0C531 /* Extensions.swift in Sources */,
 				3B6CD107281C46CE00F0C531 /* UIColor-Extension.swift in Sources */,
+				3B5C7D552826A64000708073 /* CommentCell.swift in Sources */,
 				3B6CD102281C46A600F0C531 /* PostService.swift in Sources */,
 				3B6CD12A281C470000F0C531 /* SearchViewController.swift in Sources */,
 				3B6CD13B281C50A700F0C531 /* Post.swift in Sources */,
@@ -374,14 +387,17 @@
 				3B6CD12D281C470000F0C531 /* PostViewController.swift in Sources */,
 				3B6CD10D281C46D700F0C531 /* ShopModel.swift in Sources */,
 				3B6CD12F281C470000F0C531 /* LoginViewController.swift in Sources */,
+				3B5C7D572827F24F00708073 /* CommentInputAccesoryView.swift in Sources */,
 				3B6CD113281C46EB00F0C531 /* Constants.swift in Sources */,
 				3BDB656128237BA7000B7A8D /* PostViewModel.swift in Sources */,
+				3B5C7D592828253C00708073 /* CommentService.swift in Sources */,
 				3B6CD11B281C46F800F0C531 /* ProfileCell.swift in Sources */,
 				3B6CD11D281C46F800F0C531 /* ProfileHeader.swift in Sources */,
 				3B6CD103281C46A600F0C531 /* HotpepperAPI.swift in Sources */,
 				3B6CD0DF281C415700F0C531 /* AppDelegate.swift in Sources */,
 				3B6CD13D281CE10400F0C531 /* FeedViewController.swift in Sources */,
 				3B6CD131281C470000F0C531 /* LikeViewController.swift in Sources */,
+				3B5C7D532826A3A900708073 /* CommentViewController.swift in Sources */,
 				3B6CD10C281C46D700F0C531 /* User.swift in Sources */,
 				3B6CD12E281C470000F0C531 /* MypageViewController.swift in Sources */,
 				3B6CD13F281CE56200F0C531 /* FeedCell.swift in Sources */,
