@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OKA-UN-Re8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c3i-Mr-LCi">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -660,19 +660,12 @@
                                         <outlet property="profileImage" destination="Jxt-mZ-BXC" id="CB7-dY-ezg"/>
                                     </connections>
                                 </collectionReusableView>
-                                <connections>
-                                    <outlet property="dataSource" destination="JVE-Ci-QBf" id="MQB-Sb-KPG"/>
-                                    <outlet property="delegate" destination="JVE-Ci-QBf" id="0UN-rJ-Ycx"/>
-                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="95v-za-Wh8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="マイページ" id="pDX-yJ-7Us"/>
-                    <connections>
-                        <outlet property="collectionView" destination="Chg-Ys-SxJ" id="1m9-dN-3U0"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cs3-ib-F8C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

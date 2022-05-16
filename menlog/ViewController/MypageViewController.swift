@@ -11,40 +11,52 @@ import Firebase
 private let headerIdentifer = "ProfileHeader"
 
 class MypageViewController: UIViewController {
-    
-    @IBOutlet weak var collectionView: UICollectionView!
-    
 
     var user:User? {
         didSet { collectionView.reloadData() }
     }
     
     private var posts = [Post]()
-
+    
+    private let collectionView: UICollectionView = {
+        let flowLayout = UICollectionViewFlowLayout()
+        let collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height), collectionViewLayout: flowLayout)
+        
+        collectionView.backgroundColor = UIColor.white
+        collectionView.register(ProfileCell.self, forCellWithReuseIdentifier: "ProfileCell")
+        return collectionView
+    }()
+    
+    init(user: User) {
+        self.user = user
+        super.init(nibName: nil, bundle: nil)
+    }
+//
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureCollectionView()
         fetchUser()
-//        configureCollectionView()
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "ログアウト",
-                                                           style: .plain,
-                                                           target: self,
-                                                           action: #selector(handleLogout))
-        collectionView.register(ProfileCell.self, forCellWithReuseIdentifier: "ProfileCell")
-        collectionView.register(ProfileHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "ProfileHeader")
         fetchPost()
         fetchUserStats()
+        
+        self.collectionView.dataSource = self
+        self.collectionView.delegate = self
+        view.addSubview(collectionView)
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        configureCollectionView()
         fetchUser()
     }
     
     func fetchUser() {
-        UserService.fetchUser { user in
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        UserService.fetchUser(withUid: uid) { user in
             self.user = user
             self.navigationItem.title = user.name
             self.checkIfUserIsFollowed()
@@ -81,6 +93,15 @@ class MypageViewController: UIViewController {
             self.posts = posts
             self.collectionView.reloadData()
         }
+    }
+    
+    func configureCollectionView() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "ログアウト",
+                                                           style: .plain,
+                                                           target: self,
+                                                           action: #selector(handleLogout))
+        collectionView.register(ProfileCell.self, forCellWithReuseIdentifier: "ProfileCell")
+        collectionView.register(ProfileHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "ProfileHeader")
     }
 }
 

@@ -9,10 +9,12 @@ import UIKit
 
 protocol FeedCellDelegate: class {
     func cell(_ cell: FeedCell, wantsToShowCommentsFor post: Post)
+    func cell(_ cell: FeedCell, didLike post: Post)
+    func cell(_ cell: FeedCell, wantsToShowProfileFor uid: String)
 }
 
 class FeedCell: UICollectionViewCell {
-    
+
     var viewModel: PostViewModel? {
         didSet { configure() }
     }
@@ -23,7 +25,10 @@ class FeedCell: UICollectionViewCell {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(showUserProfile))
         iv.isUserInteractionEnabled = true
+        iv.addGestureRecognizer(tap)
         return iv
     }()
     
@@ -32,7 +37,7 @@ class FeedCell: UICollectionViewCell {
         button.setTitleColor(.black, for: .normal)
         button.setTitle("username", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 13)
-        button.addTarget(self, action: #selector(didTapUsername), for: .touchUpInside)
+        button.addTarget(self, action: #selector(showUserProfile), for: .touchUpInside)
         return button
     }()
     
@@ -45,10 +50,11 @@ class FeedCell: UICollectionViewCell {
         return iv
     }()
     
-    private lazy var likeButton: UIButton = {
+     lazy var likeButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(named: "like_unselected"), for: .normal)
         button.tintColor = .black
+        button.addTarget(self, action: #selector(didTapLike), for: .touchUpInside)
         return button
     }()
     
@@ -122,13 +128,19 @@ class FeedCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc func didTapUsername() {
-        print("did tap username")
+    @objc func showUserProfile() {
+        guard  let viewModel = viewModel else { return }
+        delegate?.cell(self, wantsToShowProfileFor: viewModel.post.owenerUid)
     }
     
     @objc func didTapComments() {
         guard  let viewModel = viewModel else { return }
         delegate?.cell(self, wantsToShowCommentsFor: viewModel.post)
+    }
+    
+    @objc func didTapLike() {
+        guard let viewModel = viewModel else { return }
+        delegate?.cell(self, didLike: viewModel.post)
     }
     
     func configure() {
@@ -145,6 +157,8 @@ class FeedCell: UICollectionViewCell {
         
         usernameButton.setTitle(viewModel.username, for: .normal)
         likesLabel.text = viewModel.likesLabelText
+        likeButton.tintColor = viewModel.likeButtonTintColor
+        likeButton.setImage(viewModel.likeButtonImage, for: .normal)
     }
     
     func configureActionButtons() {

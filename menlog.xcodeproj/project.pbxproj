@@ -11,6 +11,8 @@
 		3B5C7D552826A64000708073 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C7D542826A64000708073 /* CommentCell.swift */; };
 		3B5C7D572827F24F00708073 /* CommentInputAccesoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C7D562827F24F00708073 /* CommentInputAccesoryView.swift */; };
 		3B5C7D592828253C00708073 /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C7D582828253C00708073 /* CommentService.swift */; };
+		3B5C7D5B282C120F00708073 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C7D5A282C120E00708073 /* Comment.swift */; };
+		3B5C7D5F282D698900708073 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C7D5E282D698900708073 /* CommentViewModel.swift */; };
 		3B6CD0DF281C415700F0C531 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CD0DE281C415700F0C531 /* AppDelegate.swift */; };
 		3B6CD0E1281C415700F0C531 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CD0E0281C415700F0C531 /* SceneDelegate.swift */; };
 		3B6CD0E3281C415700F0C531 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CD0E2281C415700F0C531 /* ViewController.swift */; };
@@ -51,6 +53,8 @@
 		3B5C7D542826A64000708073 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		3B5C7D562827F24F00708073 /* CommentInputAccesoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInputAccesoryView.swift; sourceTree = "<group>"; };
 		3B5C7D582828253C00708073 /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
+		3B5C7D5A282C120E00708073 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		3B5C7D5E282D698900708073 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		3B6CD0DB281C415700F0C531 /* menlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = menlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B6CD0DE281C415700F0C531 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B6CD0E0281C415700F0C531 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 				3B6CD13A281C50A700F0C531 /* Post.swift */,
 				3B6CD10A281C46D700F0C531 /* User.swift */,
 				3B6CD10B281C46D700F0C531 /* ShopModel.swift */,
+				3B5C7D5A282C120E00708073 /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -232,6 +237,7 @@
 				3B6CD134281C470900F0C531 /* ProfileHeaderViewModel.swift */,
 				3B6CD135281C470900F0C531 /* ShopViewModel.swift */,
 				3BDB656028237BA7000B7A8D /* PostViewModel.swift */,
+				3B5C7D5E282D698900708073 /* CommentViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -389,6 +395,7 @@
 				3B6CD12F281C470000F0C531 /* LoginViewController.swift in Sources */,
 				3B5C7D572827F24F00708073 /* CommentInputAccesoryView.swift in Sources */,
 				3B6CD113281C46EB00F0C531 /* Constants.swift in Sources */,
+				3B5C7D5F282D698900708073 /* CommentViewModel.swift in Sources */,
 				3BDB656128237BA7000B7A8D /* PostViewModel.swift in Sources */,
 				3B5C7D592828253C00708073 /* CommentService.swift in Sources */,
 				3B6CD11B281C46F800F0C531 /* ProfileCell.swift in Sources */,
@@ -402,6 +409,7 @@
 				3B6CD12E281C470000F0C531 /* MypageViewController.swift in Sources */,
 				3B6CD13F281CE56200F0C531 /* FeedCell.swift in Sources */,
 				3B6CD110281C46E300F0C531 /* FirebaseStorage.swift in Sources */,
+				3B5C7D5B282C120F00708073 /* Comment.swift in Sources */,
 				3B6CD0E1281C415700F0C531 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,6 +551,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 596D95CQ24;
 				INFOPLIST_FILE = menlog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -562,6 +571,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 596D95CQ24;
 				INFOPLIST_FILE = menlog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

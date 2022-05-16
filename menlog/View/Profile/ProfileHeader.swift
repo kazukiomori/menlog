@@ -74,7 +74,6 @@ class ProfileHeader: UICollectionReusableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         addSubview(profileImageView)
         profileImageView.anchor(top: topAnchor, left: leftAnchor, paddingTop: 16, paddingLeft: 12)
         profileImageView.setDimensions(height: 80, width: 80)

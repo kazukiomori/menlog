@@ -10,7 +10,8 @@ import UIKit
 class CommentViewController: UIViewController {
     
     private let post: Post
-    var user: User?
+    private var comments = [Comment]()
+//    private var user: User
     
     private lazy var commentInputView: CommentInputAccesoryView = {
         let frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 50)
@@ -19,9 +20,9 @@ class CommentViewController: UIViewController {
         return cv
     }()
     
-    init(post: Post, user: User) {
+    init(post: Post) {
         self.post = post
-        super.init()
+        super.init(nibName: nil, bundle: nil)
     }
 
     required init?(coder: NSCoder) {
@@ -41,13 +42,14 @@ class CommentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchUser()
         collectionView.dataSource = self
         collectionView.delegate = self
         view.addSubview(collectionView)
         navigationItem.title = "コメント"
         collectionView.alwaysBounceVertical = true
         collectionView.keyboardDismissMode = .interactive
+        fetchComment()
+//        fetchUser()
     }
     
     override var inputAccessoryView: UIView? {
@@ -68,39 +70,48 @@ class CommentViewController: UIViewController {
         tabBarController?.tabBar.isHidden = false
     }
     
-    func fetchUser() {
-        UserService.fetchUser { fetchuser in
-            self.user = fetchuser
+    func fetchComment() {
+        CommentService.fetchComments(forPost: post.postId) { comments in
+            self.comments = comments
+            self.collectionView.reloadData()
         }
     }
     
+//    func fetchUser() {
+//        UserService.fetchUser { user in
+//            var user = user
+//        }
+//    }
 }
 
 extension CommentViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return comments.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CommentCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CommentCell", for: indexPath) as! CommentCell
+        cell.viewModel = CommentViewModel(comment: comments[indexPath.row])
         return cell
     }
+    
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        <#code#>
+//    }
 }
 
 extension CommentViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 80)
+        let viewModel = CommentViewModel(comment: comments[indexPath.row])
+        let height = viewModel.size(forwidth: view.frame.width).height + 32
+        return CGSize(width: view.frame.width, height: height)
     }
 }
 
 extension CommentViewController: CommentInputAccesoryViewDelegate {
     func inputView(_ inputView: CommentInputAccesoryView, wantsToUploadComment comment: String) {
-        UserService.fetchUser { fetchuser in
-            self.user = fetchuser
-        }
-        guard  let user = user else { return }
-            CommentService.uploadComment(comment: comment, postID: post.postId, user: user) { error in
+            CommentService.uploadComment(comment: comment, postID: post.postId) { error in
                     inputView.clearCommentTextView()
         }
     }
