@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>お店を探すためにアプリの使用中に位置情報の利用を許可しますか？</string>
 	<key>Privacy - Photo Library Usage Description (library)
 Privacy - Photo Library Usage Description (library)
 Privacy - Photo Library Usage Description (library)

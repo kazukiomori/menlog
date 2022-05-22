@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c3i-Mr-LCi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OKA-UN-Re8">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -268,17 +268,17 @@
             </objects>
             <point key="canvasLocation" x="796" y="76"/>
         </scene>
-        <!--LikeViewController-->
+        <!--MapViewController-->
         <scene sceneID="Fpz-I4-sOV">
             <objects>
-                <viewController title="LikeViewController" modalPresentationStyle="fullScreen" id="fWm-Lv-qS6" customClass="LikeViewController" customModule="menlog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MapViewController" modalPresentationStyle="fullScreen" id="fWm-Lv-qS6" customClass="MapViewController" customModule="menlog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YEF-wi-Z0G">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="L7P-4v-2yY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="お気に入り" id="Qtx-5q-L8T"/>
+                    <navigationItem key="navigationItem" title="地図" id="Qtx-5q-L8T"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RZ8-Bj-7yK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -342,15 +342,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eI6-Uf-C2M">
-                                <rect key="frame" x="157" y="0.0" width="100" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="ejC-Vl-XUq"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem id="hgW-7a-ppC"/>
-                                </items>
-                            </navigationBar>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wcp-G4-iy4">
                                 <rect key="frame" x="10" y="128" width="394" height="200"/>
                                 <gestureRecognizers/>
@@ -361,21 +352,6 @@
                                     <outletCollection property="gestureRecognizers" destination="oes-OX-4jb" appends="YES" id="j7e-dw-Sne"/>
                                 </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PcZ-eU-chH">
-                                <rect key="frame" x="20" y="44" width="31" height="30"/>
-                                <state key="normal" title="戻る"/>
-                                <connections>
-                                    <action selector="tappedCancelButton:" destination="Yuz-Rx-PHX" eventType="touchUpInside" id="dCr-in-DLn"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTY-gD-Gzv">
-                                <rect key="frame" x="356" y="44" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="投稿"/>
-                                <connections>
-                                    <action selector="tappedPostButton:" destination="Yuz-Rx-PHX" eventType="touchUpInside" id="Ryq-Iv-stN"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="コメントを記入してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IoC-TH-Lg7">
                                 <rect key="frame" x="20" y="431" width="367" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -388,17 +364,31 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R77-xx-BAS">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="投稿" id="GlT-et-FNY">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="ehS-n5-VdH">
+                                            <connections>
+                                                <action selector="tappedCancelButton:" destination="Yuz-Rx-PHX" id="bDy-Qq-z6z"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="投稿" id="31D-RR-2dm">
+                                            <connections>
+                                                <action selector="tappedPostButton:" destination="Yuz-Rx-PHX" id="FnH-g7-MYT"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dZb-ta-1Lc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Wcp-G4-iy4" firstAttribute="leading" secondItem="dZb-ta-1Lc" secondAttribute="leading" constant="10" id="3tG-we-7LT"/>
-                            <constraint firstItem="Wcp-G4-iy4" firstAttribute="top" secondItem="PcZ-eU-chH" secondAttribute="bottom" constant="54" id="GGa-vl-FNz"/>
                             <constraint firstItem="Wcp-G4-iy4" firstAttribute="centerX" secondItem="0wK-Sx-clF" secondAttribute="centerX" id="HLX-pa-4iq"/>
                             <constraint firstItem="dZb-ta-1Lc" firstAttribute="bottom" secondItem="Wcp-G4-iy4" secondAttribute="bottom" constant="485" id="Lmf-fv-y8Z"/>
-                            <constraint firstItem="PcZ-eU-chH" firstAttribute="leading" secondItem="0wK-Sx-clF" secondAttribute="leadingMargin" id="hgM-5K-HZI"/>
-                            <constraint firstItem="Wcp-G4-iy4" firstAttribute="centerX" secondItem="eI6-Uf-C2M" secondAttribute="centerX" id="kfP-g8-VCU"/>
-                            <constraint firstItem="eI6-Uf-C2M" firstAttribute="bottom" secondItem="dZb-ta-1Lc" secondAttribute="top" id="ujh-d2-CBf"/>
                             <constraint firstItem="dZb-ta-1Lc" firstAttribute="bottom" secondItem="Wcp-G4-iy4" secondAttribute="bottom" constant="485" id="yDB-Ru-40A"/>
                         </constraints>
                     </view>
@@ -417,7 +407,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="6436" y="-1334"/>
+            <point key="canvasLocation" x="6434.7826086956529" y="-1334.5982142857142"/>
         </scene>
         <!--Comment View Controller-->
         <scene sceneID="sMP-vi-t64">
@@ -571,11 +561,11 @@
             </objects>
             <point key="canvasLocation" x="4396" y="-1035"/>
         </scene>
-        <!--Like-->
+        <!--Map-->
         <scene sceneID="DBw-7k-Yno">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hvf-VB-qzC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Like" image="heart" catalog="system" id="wEr-Oj-fIk"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="mappin.and.ellipse" catalog="system" id="wEr-Oj-fIk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="74L-jF-HPw">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -692,13 +682,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="18y-OG-uBl"/>
+        <segue reference="tP0-3o-79O"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <image name="paperplane" catalog="system" width="128" height="118"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>

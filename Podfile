@@ -18,5 +18,7 @@ target 'menlog' do
   pod 'YPImagePicker'
   
   pod 'SDWebImage'
+  
+  pod 'GoogleMaps'
 
 end

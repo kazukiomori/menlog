@@ -27,7 +27,7 @@ class PostViewController: UIViewController{
         shopnameTextField.delegate = self
         captionTextField.delegate = self
         fetchUser()
-        
+    
     }
     
     func didFinishPickingMedia (_ picker: YPImagePicker) {
@@ -44,7 +44,27 @@ class PostViewController: UIViewController{
     @IBAction func tappedCancelButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @objc func cancelButton() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func tappedPostButton(_ sender: Any) {
+        guard let shopname = shopnameTextField.text else { return }
+        guard let caption = captionTextField.text else { return }
+        guard let image = imageView.image else { return }
+        guard let user = self.user else { return }
+
+        PostService.uploadePost(shopname: shopname, caption: caption, image: image, user: user) { error in
+            if let error = error {
+                print("Faild to upload post\(error.localizedDescription)")
+                return
+            }
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    @objc func postTweet() {
         guard let shopname = shopnameTextField.text else { return }
         guard let caption = captionTextField.text else { return }
         guard let image = imageView.image else { return }

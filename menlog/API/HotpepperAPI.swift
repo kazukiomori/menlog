@@ -41,4 +41,31 @@ final class HotpepperAPI {
         }
         dataTask?.resume() // 実行する
     }
+    
+    func  getShopWithLocation(lat: String, lon: String, completion: @escaping (Result<Results, Error>) -> Void) {
+        guard let url = URL(string: "https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=7482a1925ba91a19&genre=G013&lat=\(lat)&lng=\(lon)&count=20&format=json") else { return }
+        
+        dataTask = URLSession.shared.dataTask(with: url) {
+            data, response, error in
+            if let error = error {
+                completion(.failure(error))
+                print(error.localizedDescription)
+                return
+            }
+            
+            guard let data = data else{
+                return
+            }
+            // サーバから受け取ったデータをデコードする
+            do{
+                let result = try JSONDecoder().decode(HotPepperResponse.self, from: data)
+                DispatchQueue.main.async {
+                    completion(.success(result.results))
+                }
+            }catch let error{
+                completion(.failure(error))
+            }
+        }
+        dataTask?.resume() // 実行する
+    }
 }

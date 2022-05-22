@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B06611028355AF60019FA4F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B06610F28355AF60019FA4F /* MapViewController.swift */; };
 		3B5C7D532826A3A900708073 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C7D522826A3A900708073 /* CommentViewController.swift */; };
 		3B5C7D552826A64000708073 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C7D542826A64000708073 /* CommentCell.swift */; };
 		3B5C7D572827F24F00708073 /* CommentInputAccesoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C7D562827F24F00708073 /* CommentInputAccesoryView.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B06610F28355AF60019FA4F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3B5C7D522826A3A900708073 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		3B5C7D542826A64000708073 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		3B5C7D562827F24F00708073 /* CommentInputAccesoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInputAccesoryView.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				3B6CD127281C470000F0C531 /* LikeViewController.swift */,
 				3B6CD13C281CE10400F0C531 /* FeedViewController.swift */,
 				3B5C7D522826A3A900708073 /* CommentViewController.swift */,
+				3B06610F28355AF60019FA4F /* MapViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				3B6CD0D8281C415700F0C531 /* Frameworks */,
 				3B6CD0D9281C415700F0C531 /* Resources */,
 				B514299C01C9554F0DE63FEA /* [CP] Embed Pods Frameworks */,
+				2C9A6F42BC8BC1A35DDE8B06 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -353,6 +357,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		2C9A6F42BC8BC1A35DDE8B06 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-menlog/Pods-menlog-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-menlog/Pods-menlog-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-menlog/Pods-menlog-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B514299C01C9554F0DE63FEA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -390,6 +411,7 @@
 				3B6CD11A281C46F800F0C531 /* ShopTableViewCell.swift in Sources */,
 				3B6CD129281C470000F0C531 /* SignUpViewController.swift in Sources */,
 				3B6CD100281C46A600F0C531 /* ImageUploader.swift in Sources */,
+				3B06611028355AF60019FA4F /* MapViewController.swift in Sources */,
 				3B6CD12D281C470000F0C531 /* PostViewController.swift in Sources */,
 				3B6CD10D281C46D700F0C531 /* ShopModel.swift in Sources */,
 				3B6CD12F281C470000F0C531 /* LoginViewController.swift in Sources */,
