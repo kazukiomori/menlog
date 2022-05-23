@@ -31,7 +31,6 @@ class PostViewController: UIViewController{
     }
     
     func didFinishPickingMedia (_ picker: YPImagePicker) {
-//        guard let viewModel = viewModel else { return }
         picker.didFinishPicking { items, _ in
             picker.dismiss(animated: true, completion: nil)
             

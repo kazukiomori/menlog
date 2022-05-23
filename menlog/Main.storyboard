@@ -644,6 +644,7 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Jxt-mZ-BXC">
                                             <rect key="frame" x="8" y="-2" width="129" height="128"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <gestureRecognizers/>
                                         </imageView>
                                     </subviews>
                                     <connections>
@@ -658,6 +659,11 @@
                     <navigationItem key="navigationItem" title="マイページ" id="pDX-yJ-7Us"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cs3-ib-F8C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="6Zr-SK-KTs">
+                    <connections>
+                        <action selector="pickProfileImage:" destination="JVE-Ci-QBf" id="tHB-7q-pDj"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="5305.7971014492759" y="1429.6875"/>
         </scene>

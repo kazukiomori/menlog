@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import YPImagePicker
 
 private let headerIdentifer = "ProfileHeader"
 
@@ -54,6 +55,35 @@ class MypageViewController: UIViewController {
         fetchUser()
     }
     
+    @objc func changeProfileImageButton(_ sender: Any) {
+        var config = YPImagePickerConfiguration()
+        config.library.mediaType = .photo
+        config.shouldSaveNewPicturesToAlbum = false
+        config.startOnScreen = .library
+        config.screens = [.library]
+        config.hidesStatusBar = false
+        config.hidesBottomBar = false
+        config.library.maxNumberOfItems = 1
+        
+        let picker = YPImagePicker(configuration: config)
+        picker.modalPresentationStyle = .fullScreen
+        
+        self.present(picker, animated: true, completion: nil)
+        
+        didFinishPickingMedia(picker)
+    }
+    
+    func didFinishPickingMedia (_ picker: YPImagePicker) {
+        picker.didFinishPicking { items, _ in
+            picker.dismiss(animated: true, completion: nil)
+            
+            guard let selectedImage = items.singlePhoto?.image else {return}
+            imageUploader.uploadeProfileImage(image: selectedImage) {_ in
+                
+            }
+        }
+    }
+    
     func fetchUser() {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         UserService.fetchUser(withUid: uid) { user in
@@ -96,6 +126,10 @@ class MypageViewController: UIViewController {
     }
     
     func configureCollectionView() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "＋",
+                                                           style: .plain,
+                                                           target: self,
+                                                           action: #selector(changeProfileImageButton))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "ログアウト",
                                                            style: .plain,
                                                            target: self,
