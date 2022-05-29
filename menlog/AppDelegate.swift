@@ -18,6 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         GMSServices.provideAPIKey("AIzaSyDnmUH90bqf-4czqRpqKv0uuLWlZiIX4Nk")
+        
+        // ios15以上はタブバーがデフォルトで透明になるので白を指定
+        if #available(iOS 15.0, *) {
+            // disable UITab bar transparent
+            let tabBarAppearance: UITabBarAppearance = UITabBarAppearance()
+            tabBarAppearance.configureWithDefaultBackground()
+            UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+            UITabBar.appearance().standardAppearance = tabBarAppearance
+        }
+
         return true
     }
 

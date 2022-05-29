@@ -10,6 +10,13 @@ import Firebase
 
 struct PostService {
     
+    /// firestoreに投稿を保存する
+    /// - Parameters:
+    ///   - shopname: 投稿する店の名前
+    ///   - caption: 感想など、短い説明
+    ///   - image: お店や商品の画像
+    ///   - user: 投稿するユーザ
+    ///   - completion: completion description
     static func uploadePost(shopname: String, caption: String, image: UIImage, user:User, completion: @escaping(FirestoreCompletion)) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
@@ -29,10 +36,14 @@ struct PostService {
         }
     }
     
+    /// 投稿が完了した後に、postIdを投稿した内容に付け加える
+    /// - Parameter postId: 投稿後に任意に割り振られるpostId
     static func uploadPostId(postId: String) {
         COLLECTION_POSTS.document(postId).setData(["postId": postId], merge: true)
     }
     
+    /// 投稿された内容を全て取ってきて、投稿時間順に並べる
+    /// - Parameter completion: completion description
     static func fetchPosts(completion: @escaping([Post]) -> Void) {
         COLLECTION_POSTS.order(by: "timeStamp", descending: true).getDocuments { (snapshot, error) in
             guard let documents = snapshot?.documents else {return}

@@ -2,7 +2,7 @@
 import Foundation
 import UIKit
 
-class SearchViewController: UIViewController, UITableViewDelegate{
+class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,9 +18,7 @@ class SearchViewController: UIViewController, UITableViewDelegate{
             self?.tableView.reloadData()
         }
     }
-}
 
-extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return viewModel.numberOfRowsInsection(section: section)
     }

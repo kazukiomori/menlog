@@ -194,7 +194,9 @@ extension MypageViewController: UICollectionViewDelegateFlowLayout {
 extension MypageViewController: ProfileHeaderDelegate {
     func header(_ profileHeader: ProfileHeader, didTapActionButtonFor user: User) {
         if user.isCurrentUser {
-            
+            let controller = SettitngViewController()
+            controller.modalPresentationStyle = .fullScreen
+            present(controller, animated: true)
         } else if user.isFollowed {
             UserService.unfollow(uid: user.uid) { error in
                 self.user?.isFollowed = false

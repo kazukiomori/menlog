@@ -8,6 +8,7 @@
 import UIKit
 import MapKit
 import GoogleMaps
+import SDWebImage
 
 class MapViewController: UIViewController {
     
@@ -15,6 +16,10 @@ class MapViewController: UIViewController {
     private var hotpepperAPI = HotpepperAPI()
     var mapView = GMSMapView()
     private var shop = [Shop]()
+    private let shopImage: UIImage = {
+        let shopImage = UIImage()
+        return shopImage
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +59,10 @@ class MapViewController: UIViewController {
                     marker.position = CLLocationCoordinate2D(latitude: (self?.shop[i].lat)!, longitude: (self?.shop[i].lng)!)
                     marker.title = "\((self?.shop[i].name)!)"
                     marker.snippet = "\((self?.shop[i].catch)!)"
+                    if ((self?.shop[i].logoImage) != nil) {
+                        let shopName = (self?.shop[i].logoImage)!.absoluteString
+                        marker.icon = UIImage(url: shopName)
+                    }
                     marker.map = self?.mapView
                 }
             case .failure(let error):
