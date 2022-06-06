@@ -2,28 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>お店を探すためにアプリの使用中に位置情報の利用を許可しますか？</string>
-	<key>Privacy - Photo Library Usage Description (library)
-Privacy - Photo Library Usage Description (library)
-Privacy - Photo Library Usage Description (library)
-Privacy - Photo Library Usage Description (library)
-Privacy - Photo Library Usage Description (library)
-Privacy - Photo Library Usage Description (library)
-Privacy - Photo Library Usage Description (library)
-Privacy - Photo Library Usage Description (library)
-Privacy - Photo Library Usage Description (library)
-Privacy - Photo Library Usage Description (library)
-Privacy - Photo Library Usage Description (library)
-Privacy - Photo Library Usage Description (library)
-</key>
-	<string>フォトライブラリの利用を許可しますか？</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>フォトライブラリの利用を許可しますか？</string>
-	<key>Privacy – Photo Library Usage Description</key>
-	<string>ラーメンを投稿するためにカメラのアクセスを許可しますか？</string>
-	<key>NSCameraUsageDescription</key>
-	<string>ラーメンを投稿するためにカメラのアクセスを許可しますか？</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -39,9 +17,19 @@ Privacy - Photo Library Usage Description (library)
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>このアプリでラーメンの写真を投稿するためにカメラのアクセスを許可しますか？</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>お店を探すためにアプリの使用中に位置情報の利用を許可しますか？</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>このアプリでラーメンの写真を投稿するためにフォトライブラリの利用を許可しますか？</string>
+	<key>Privacy - Photo Library Usage Description (library)</key>
+	<string>このアプリでラーメンの写真を投稿するためにフォトライブラリの利用を許可しますか？</string>
+	<key>Privacy – Photo Library Usage Description</key>
+	<string>このアプリでラーメンの写真を投稿するためにフォトライブラリの利用を許可しますか？</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

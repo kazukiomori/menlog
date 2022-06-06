@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OKA-UN-Re8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OKA-UN-Re8">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -94,7 +95,7 @@
                                 </state>
                                 <connections>
                                     <action selector="tappedRegisterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vB6-i1-qfg"/>
-                                    <segue destination="c3i-Mr-LCi" kind="presentation" id="18y-OG-uBl"/>
+                                    <segue destination="c3i-Mr-LCi" kind="presentation" id="uzb-2m-f6t"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MLo-Hk-sdn">
@@ -111,6 +112,7 @@
                                         <state key="normal" title="コチラ"/>
                                         <connections>
                                             <action selector="onTappedHaveAccountButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iv7-ao-Cyu"/>
+                                            <segue destination="OKA-UN-Re8" kind="presentation" id="bTl-qz-85T"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -150,7 +152,7 @@
         <!--Login View Controller-->
         <scene sceneID="LNP-ku-6rp">
             <objects>
-                <viewController id="OKA-UN-Re8" customClass="LoginViewController" customModule="menlog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="OKA-UN-Re8" customClass="LoginViewController" customModule="menlog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7nd-fd-lsd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -232,7 +234,7 @@
                                         <state key="normal" title="コチラ"/>
                                         <connections>
                                             <action selector="tappedNotHaveAccountButton:" destination="OKA-UN-Re8" eventType="touchUpInside" id="Ycb-r1-bFR"/>
-                                            <segue destination="BYZ-38-t0r" kind="presentation" id="0az-ln-Zub"/>
+                                            <segue destination="wt3-hL-j6t" kind="presentation" id="7Qf-PH-0mf"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -464,7 +466,6 @@
                     <connections>
                         <segue destination="2eQ-M2-AAd" kind="relationship" relationship="viewControllers" id="m0o-Ap-abX"/>
                         <segue destination="hvf-VB-qzC" kind="relationship" relationship="viewControllers" id="HeX-RB-NhB"/>
-                        <segue destination="gDL-9A-f5U" kind="relationship" relationship="viewControllers" id="q7E-cC-qDh"/>
                         <segue destination="KvI-LD-T81" kind="relationship" relationship="viewControllers" id="oXX-ov-5fz"/>
                     </connections>
                 </tabBarController>
@@ -481,11 +482,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CgD-0v-385">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="252" id="c2v-KZ-sll" customClass="ShopTableViewCell" customModule="menlog" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="252"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="252"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c2v-KZ-sll" id="y50-bx-OHZ">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="252"/>
@@ -518,10 +519,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="e4U-gF-ONF" id="Rry-y4-XQ0"/>
-                                    <outlet property="delegate" destination="e4U-gF-ONF" id="6LT-4V-bf0"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H25-OM-wEJ"/>
@@ -534,9 +531,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="検索" id="76d-eY-Mhr"/>
-                    <connections>
-                        <outlet property="tableView" destination="CgD-0v-385" id="RC9-OU-i39"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ums-4Q-zPl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -579,25 +573,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L12-hq-Tgg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4396" y="-200"/>
-        </scene>
-        <!--Search-->
-        <scene sceneID="Xkf-Ux-8zL">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gDL-9A-f5U" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="Hn6-am-zub"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FLo-0b-tPO">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="e4U-gF-ONF" kind="relationship" relationship="rootViewController" id="Av3-Dw-jx8"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B3v-Hf-Grt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4396" y="619"/>
         </scene>
         <!--MypageViewController-->
         <scene sceneID="nuZ-Ul-SaH">
@@ -686,14 +661,49 @@
             </objects>
             <point key="canvasLocation" x="4395.652173913044" y="1429.6875"/>
         </scene>
+        <!--EULAViewController-->
+        <scene sceneID="mXV-8F-hAk">
+            <objects>
+                <viewController title="EULAViewController" modalPresentationStyle="fullScreen" id="wt3-hL-j6t" customClass="EULAViewController" customModule="menlog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M0D-9Q-RC3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEi-XK-Ofq">
+                                <rect key="frame" x="268" y="781" width="126" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="同意する"/>
+                                <connections>
+                                    <action selector="tappedAllowButton:" destination="wt3-hL-j6t" eventType="touchUpInside" id="JPW-rm-oWW"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="Fyo-RP-Yub"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vgg-vn-xrd">
+                                <rect key="frame" x="33" y="781" width="113" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="同意しない"/>
+                                <connections>
+                                    <action selector="tappedNotAllowButton:" destination="wt3-hL-j6t" eventType="touchUpInside" id="nxt-nV-K5R"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NOG-uZ-5k6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JKj-RH-boY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1618.840579710145" y="689.73214285714278"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tP0-3o-79O"/>
+        <segue reference="uzb-2m-f6t"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <image name="paperplane" catalog="system" width="128" height="118"/>
         <image name="person" catalog="system" width="128" height="117"/>

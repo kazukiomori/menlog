@@ -37,17 +37,32 @@ class PostViewController: UIViewController{
     
     /// firestoreに投稿を保存する
     /// - Parameter sender: sender description
-    @IBAction func tappedPostButton(_ sender: Any) {
-        guard let shopname = shopnameTextField.text else { return }
-        guard let caption = captionTextField.text else { return }
-        guard let image = imageView.image else { return }
-        guard let user = self.user else { return }
-
+    @IBAction func tappedPostButton(_ sender: UIButton) {
+        sender.isEnabled = false
+        guard let shopname = shopnameTextField.text else {
+            sender.isEnabled = true
+            return
+        }
+        guard let caption = captionTextField.text else {
+            sender.isEnabled = true
+            return
+        }
+        guard let image = imageView.image else {
+            sender.isEnabled = true
+            return
+        }
+        guard let user = self.user else {
+            sender.isEnabled = true
+            return
+        }
+        
         PostService.uploadePost(shopname: shopname, caption: caption, image: image, user: user) { error in
             if let error = error {
                 print("Faild to upload post\(error.localizedDescription)")
+                sender.isEnabled = true
                 return
             }
+            sender.isEnabled = true
             self.dismiss(animated: true, completion: nil)
         }
     }
