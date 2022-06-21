@@ -16,6 +16,8 @@ struct PostViewModel {
     
     var username: String? { return  post.ownerUsername }
     
+    var ownerUid: String? { return post.ownerUid }
+    
     var shopname: String? { return post.shopname }
     
     var caption: String? { return post.caption }

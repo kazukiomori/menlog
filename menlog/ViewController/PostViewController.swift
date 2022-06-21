@@ -98,8 +98,7 @@ class PostViewController: UIViewController{
     
     // ユーザ情報を取得
     func fetchUser() {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        UserService.fetchUser(withUid: uid) { user in
+        UserService.fetchUser() { user in
             self.user = user
         }
     }

@@ -12,7 +12,8 @@ import YPImagePicker
 private let headerIdentifer = "ProfileHeader"
 
 class MypageViewController: UIViewController {
-
+    
+    // userの値が更新されたタイミングでcollectionViewも更新する
     var user:User? {
         didSet { collectionView.reloadData() }
     }
@@ -41,7 +42,12 @@ class MypageViewController: UIViewController {
         super.viewDidLoad()
         
         configureCollectionView()
-        fetchUser()
+        if fromFeedViewController {
+            fetchOtherUser()
+        } else {
+            fetchUser()
+        }
+        
         fetchPost()
         fetchUserStats()
         
@@ -52,7 +58,11 @@ class MypageViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         configureCollectionView()
-        fetchUser()
+        if fromFeedViewController {
+            fetchOtherUser()
+        } else {
+            fetchUser()
+        }
     }
     
     @objc func changeProfileImageButton(_ sender: Any) {
@@ -85,8 +95,15 @@ class MypageViewController: UIViewController {
     }
     
     func fetchUser() {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        UserService.fetchUser(withUid: uid) { user in
+        UserService.fetchUser() { user in
+            self.user = user
+            self.navigationItem.title = user.name
+            self.checkIfUserIsFollowed()
+        }
+    }
+    func fetchOtherUser() {
+        UserService.fetchUser(withUid: user?.uid) { user in
+            fromFeedViewController = false
             self.user = user
             self.navigationItem.title = user.name
             self.checkIfUserIsFollowed()
@@ -117,6 +134,8 @@ class MypageViewController: UIViewController {
         }
     }
     
+//    TODO Feed画面から来たか判別するフラグを用意する
+//    フラグが立っているときはuser.uid フラグなしの場合はAuth.auth().currentUser?.uid
     func fetchPost() {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         PostService.fetchPosts(forUser: uid) { posts in

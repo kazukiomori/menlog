@@ -29,7 +29,7 @@ class SettitngViewController: UITableViewController {
     
     func fetchUser() {
         guard let uid = Auth.auth().currentUser?.uid else { return }
-        UserService.fetchUser(withUid: uid) { user in
+        UserService.fetchUser() { user in
             self.user = user
         }
     }

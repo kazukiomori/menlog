@@ -9,6 +9,8 @@ import UIKit
 
 let screenSize: CGSize = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
 
+var fromFeedViewController = false
+
 class FeedViewController: UIViewController {
     
     
@@ -105,8 +107,9 @@ extension FeedViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension FeedViewController: FeedCellDelegate {
-    func cell(_ cell: FeedCell, wantsToShowProfileFor uid: String) {
-        UserService.fetchUser(withUid: uid) { user in
+    func cell(_ cell: FeedCell, wantsToShowProfileFor post: Post) {
+        UserService.fetchUser(withUid: post.ownerUid) { user in
+            fromFeedViewController = true
             let controller = MypageViewController(user: user)
             self.navigationController?.pushViewController(controller, animated: true)
         }

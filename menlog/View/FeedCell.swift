@@ -10,7 +10,7 @@ import UIKit
 protocol FeedCellDelegate: class {
     func cell(_ cell: FeedCell, wantsToShowCommentsFor post: Post)
     func cell(_ cell: FeedCell, didLike post: Post)
-    func cell(_ cell: FeedCell, wantsToShowProfileFor uid: String)
+    func cell(_ cell: FeedCell, wantsToShowProfileFor post: Post)
 }
 
 class FeedCell: UICollectionViewCell {
@@ -130,7 +130,7 @@ class FeedCell: UICollectionViewCell {
     
     @objc func showUserProfile() {
         guard  let viewModel = viewModel else { return }
-        delegate?.cell(self, wantsToShowProfileFor: viewModel.post.owenerUid)
+        delegate?.cell(self, wantsToShowProfileFor: viewModel.post)
     }
     
     @objc func didTapComments() {

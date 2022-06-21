@@ -98,4 +98,8 @@ struct PostService {
             completion(didLike)
         }
     }
+    
+    static func deletePost() {
+        
+    }
 }
