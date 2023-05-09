@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bxu-jU-ibJ">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HomeViewController-->
+        <scene sceneID="z32-i1-8Kc">
+            <objects>
+                <viewController title="HomeViewController" modalPresentationStyle="fullScreen" id="AVX-uh-gnB" customClass="FeedViewController" customModule="menlog" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PE7-SB-Ov5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gph-MX-bQd">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ObY-XY-oEj">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hzA-QA-bjB">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="r81-qU-KML" customClass="FeedCell" customModule="menlog" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NRs-e6-gcp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gph-MX-bQd" firstAttribute="leading" secondItem="NRs-e6-gcp" secondAttribute="leading" id="6er-xZ-Wrj"/>
+                            <constraint firstItem="gph-MX-bQd" firstAttribute="top" secondItem="NRs-e6-gcp" secondAttribute="top" id="gIA-qe-Ums"/>
+                            <constraint firstItem="NRs-e6-gcp" firstAttribute="trailing" secondItem="gph-MX-bQd" secondAttribute="trailing" id="k0J-mm-8Bb"/>
+                            <constraint firstItem="NRs-e6-gcp" firstAttribute="bottom" secondItem="gph-MX-bQd" secondAttribute="bottom" id="lF2-9v-M4v"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ホーム" id="jgl-8Y-5E3">
+                        <barButtonItem key="rightBarButtonItem" title="Post" image="paperplane" catalog="system" id="349-hX-ERg">
+                            <connections>
+                                <segue destination="m3v-es-KIo" kind="presentation" id="sFU-I2-NPE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JGI-Wv-6Bb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5305.7971014492759" y="-1035.2678571428571"/>
+        </scene>
+        <!--Post View Controller-->
+        <scene sceneID="IEw-le-qXX">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="m3v-es-KIo" customClass="PostViewController" customModule="menlog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Em-sT-Xks">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gz8-5W-9cc">
+                                <rect key="frame" x="10" y="84" width="373" height="200"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="nbi-gb-3ju"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="lRg-T6-72r" appends="YES" id="XXQ-Vs-pyj"/>
+                                </connections>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="コメントを記入してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tq0-AZ-Nqr">
+                                <rect key="frame" x="20" y="431" width="367" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="店名を記入してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ti9-Gw-PW0">
+                                <rect key="frame" x="20" y="361" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z2n-wm-hyH">
+                                <rect key="frame" x="0.0" y="44" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="投稿" id="I4m-sH-jsZ">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="o8g-KW-dAy">
+                                            <connections>
+                                                <action selector="tappedCancelButton:" destination="m3v-es-KIo" id="QB9-iZ-KKh"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="投稿" id="tzq-Ow-vwz">
+                                            <connections>
+                                                <action selector="tappedPostButton:" destination="m3v-es-KIo" id="h0U-uX-B14"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yAk-m7-ac1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gz8-5W-9cc" firstAttribute="leading" secondItem="yAk-m7-ac1" secondAttribute="leading" constant="10" id="6gK-fb-d5Q"/>
+                            <constraint firstItem="gz8-5W-9cc" firstAttribute="centerX" secondItem="9Em-sT-Xks" secondAttribute="centerX" id="Xuv-nF-fKk"/>
+                            <constraint firstItem="yAk-m7-ac1" firstAttribute="bottom" secondItem="gz8-5W-9cc" secondAttribute="bottom" constant="485" id="Ym1-51-FZF"/>
+                            <constraint firstItem="yAk-m7-ac1" firstAttribute="bottom" secondItem="gz8-5W-9cc" secondAttribute="bottom" constant="485" id="baq-ej-JP9"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="captionTextField" destination="Tq0-AZ-Nqr" id="CaC-xQ-KzA"/>
+                        <outlet property="imageView" destination="gz8-5W-9cc" id="xmc-ky-gsh"/>
+                        <outlet property="shopnameTextField" destination="ti9-Gw-PW0" id="fOG-o9-cgU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Njc-Fi-Enx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="lRg-T6-72r">
+                    <connections>
+                        <action selector="pickImage:" destination="m3v-es-KIo" id="Fug-Zd-bss"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="6434.7826086956529" y="-1334.5982142857142"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="uN7-n0-UEn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bxu-jU-ibJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house.fill" id="By2-Gv-FSA"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="95f-7c-JiB">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AVX-uh-gnB" kind="relationship" relationship="rootViewController" id="pFz-q1-Ttd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yhF-D9-uwT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4396" y="-1035"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="paperplane" catalog="system" width="128" height="119"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -47,6 +47,7 @@
 		3B6CD13F281CE56200F0C531 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CD13E281CE56200F0C531 /* FeedCell.swift */; };
 		3BA191D228472829000CC3E5 /* EULAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA191D128472829000CC3E5 /* EULAViewController.swift */; };
 		3BDB656128237BA7000B7A8D /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDB656028237BA7000B7A8D /* PostViewModel.swift */; };
+		3BEEDB3B2A0A945C00D58C88 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEEDB3A2A0A945C00D58C88 /* HomeViewController.storyboard */; };
 		8991C83110F2FE728A051C15 /* Pods_menlog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451BDEF092DA8887D807C14A /* Pods_menlog.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		3B6CD13E281CE56200F0C531 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		3BA191D128472829000CC3E5 /* EULAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EULAViewController.swift; sourceTree = "<group>"; };
 		3BDB656028237BA7000B7A8D /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		3BEEDB3A2A0A945C00D58C88 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		451BDEF092DA8887D807C14A /* Pods_menlog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_menlog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A53164F544209FB9B25BAE1E /* Pods-menlog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-menlog.debug.xcconfig"; path = "Target Support Files/Pods-menlog/Pods-menlog.debug.xcconfig"; sourceTree = "<group>"; };
 		DC7742E78F8910002011869E /* Pods-menlog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-menlog.release.xcconfig"; path = "Target Support Files/Pods-menlog/Pods-menlog.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,7 +144,7 @@
 				3B6CD0DE281C415700F0C531 /* AppDelegate.swift */,
 				3B6CD0E0281C415700F0C531 /* SceneDelegate.swift */,
 				3B6CD0E2281C415700F0C531 /* ViewController.swift */,
-				3B6CD138281C476D00F0C531 /* Main.storyboard */,
+				3BEEDB392A0A941B00D58C88 /* StoryBoard */,
 				3B6CD0E7281C415900F0C531 /* Assets.xcassets */,
 				3B6CD0E9281C415900F0C531 /* LaunchScreen.storyboard */,
 				3B6CD0EC281C415900F0C531 /* Info.plist */,
@@ -248,6 +250,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		3BEEDB392A0A941B00D58C88 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				3B6CD138281C476D00F0C531 /* Main.storyboard */,
+				3BEEDB3A2A0A945C00D58C88 /* HomeViewController.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
 		753DCCC98C9E7B38949B3A58 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BEEDB3B2A0A945C00D58C88 /* HomeViewController.storyboard in Resources */,
 				3B6CD0EB281C415900F0C531 /* LaunchScreen.storyboard in Resources */,
 				3B6CD139281C476D00F0C531 /* Main.storyboard in Resources */,
 				3B6CD0E8281C415900F0C531 /* Assets.xcassets in Resources */,

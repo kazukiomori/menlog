@@ -130,6 +130,38 @@
             endingLineNumber = "59"
             landmarkName = "tappedPostButton(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "67973637-21F0-4366-9794-A734FF8744C1 - 72db29d3e63ffc79"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "menlog.PostViewController.tappedPostButton(__C.UIButton) -&gt; ()"
+                  moduleName = "menlog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazukiomori/menlog/menlog/ViewController/PostViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "1376">
+               </Location>
+               <Location
+                  uuid = "67973637-21F0-4366-9794-A734FF8744C1 - ea3761c3901b7cb6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in menlog.PostViewController.tappedPostButton(__C.UIButton) -&gt; ()"
+                  moduleName = "menlog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazukiomori/menlog/menlog/ViewController/PostViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "129">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -633,6 +665,38 @@
             endingLineNumber = "114"
             landmarkName = "inputView(_:wantsToUploadComment:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5B0E9C00-DBAE-4E52-82F7-C7B8C01581DA - 8eb6e808a3482067"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "menlog.CommentViewController.inputView(_: menlog.CommentInputAccesoryView, wantsToUploadComment: Swift.String) -&gt; ()"
+                  moduleName = "menlog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazukiomori/menlog/menlog/ViewController/CommentViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "59">
+               </Location>
+               <Location
+                  uuid = "5B0E9C00-DBAE-4E52-82F7-C7B8C01581DA - 83330ba4b6517b54"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in menlog.CommentViewController.inputView(_: menlog.CommentInputAccesoryView, wantsToUploadComment: Swift.String) -&gt; ()"
+                  moduleName = "menlog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazukiomori/menlog/menlog/ViewController/CommentViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "37">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1579,14 +1643,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "38E3CE09-383B-4D6F-AF1D-C99330402038 - f6be8e4935f2f431"
+                  uuid = "38E3CE09-383B-4D6F-AF1D-C99330402038 - 952c586a621a3026"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "menlog.MypageViewController.__allocating_init(user: menlog.User) -&gt; menlog.MypageViewController"
                   moduleName = "menlog"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kazukiomori/Desktop/Swift/menlog/menlog/ViewController/MypageViewController.swift"
+                  urlString = "file:///Users/kazukiomori/menlog/menlog/ViewController/MypageViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -1594,18 +1658,18 @@
                   offsetFromSymbolStart = "25">
                </Location>
                <Location
-                  uuid = "38E3CE09-383B-4D6F-AF1D-C99330402038 - 6f71a686475877f9"
+                  uuid = "38E3CE09-383B-4D6F-AF1D-C99330402038 - ce370a510b0b3ef"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "menlog.MypageViewController.init(user: menlog.User) -&gt; menlog.MypageViewController"
                   moduleName = "menlog"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kazukiomori/Desktop/Swift/menlog/menlog/ViewController/MypageViewController.swift"
+                  urlString = "file:///Users/kazukiomori/menlog/menlog/ViewController/MypageViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
                   offsetFromSymbolStart = "481">
                </Location>
             </Locations>
