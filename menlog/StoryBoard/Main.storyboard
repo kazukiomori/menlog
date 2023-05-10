@@ -270,22 +270,6 @@
             </objects>
             <point key="canvasLocation" x="796" y="76"/>
         </scene>
-        <!--MapViewController-->
-        <scene sceneID="Fpz-I4-sOV">
-            <objects>
-                <viewController title="MapViewController" modalPresentationStyle="fullScreen" id="fWm-Lv-qS6" customClass="MapViewController" customModule="menlog" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YEF-wi-Z0G">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="L7P-4v-2yY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="地図" id="Qtx-5q-L8T"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RZ8-Bj-7yK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5306" y="-200"/>
-        </scene>
         <!--Comment View Controller-->
         <scene sceneID="sMP-vi-t64">
             <objects>
@@ -339,9 +323,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="hvf-VB-qzC" kind="relationship" relationship="viewControllers" id="HeX-RB-NhB"/>
-                        <segue destination="KvI-LD-T81" kind="relationship" relationship="viewControllers" id="oXX-ov-5fz"/>
                         <segue destination="nJ3-f3-J2x" kind="relationship" relationship="viewControllers" id="Yya-yO-DC5"/>
+                        <segue destination="NiF-ZX-vvS" kind="relationship" relationship="viewControllers" id="Gfv-tN-3yp"/>
+                        <segue destination="sbT-Hf-0zs" kind="relationship" relationship="viewControllers" id="hV1-gS-rJq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rUL-nW-HNA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -419,113 +403,27 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ax-I6-0lq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3496" y="-582"/>
+            <point key="canvasLocation" x="2282" y="327"/>
         </scene>
-        <!--Map-->
-        <scene sceneID="DBw-7k-Yno">
+        <!--MapViewController-->
+        <scene sceneID="CPf-Lb-9w5">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hvf-VB-qzC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" image="mappin.and.ellipse" catalog="system" id="wEr-Oj-fIk"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="74L-jF-HPw">
-                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="fWm-Lv-qS6" kind="relationship" relationship="rootViewController" id="zae-LU-OFc"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L12-hq-Tgg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="MapViewController" id="NiF-ZX-vvS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="ygD-16-Uj9"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IZ3-7a-Meu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4396" y="-200"/>
+            <point key="canvasLocation" x="2719" y="327"/>
         </scene>
         <!--MypageViewController-->
-        <scene sceneID="nuZ-Ul-SaH">
+        <scene sceneID="llA-HN-4oP">
             <objects>
-                <viewController title="MypageViewController" modalPresentationStyle="fullScreen" id="JVE-Ci-QBf" customClass="MypageViewController" customModule="menlog" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Uo9-RD-BRA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Chg-Ys-SxJ">
-                                <rect key="frame" x="0.0" y="56" width="414" height="703"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gAZ-c4-i39">
-                                    <size key="itemSize" width="82" height="159"/>
-                                    <size key="headerReferenceSize" width="50" height="134"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProfileCell" id="go1-nj-9v7" customClass="ProfileCell" customModule="menlog" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="134" width="82" height="159"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MSQ-mb-Tvd">
-                                            <rect key="frame" x="0.0" y="0.0" width="82" height="159"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GNC-Zf-S4y">
-                                                    <rect key="frame" x="0.0" y="23" width="82" height="128"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="82" height="159"/>
-                                        <connections>
-                                            <outlet property="postImageView" destination="GNC-Zf-S4y" id="1Tg-d7-Dwa"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="SUu-cb-yHJ" customClass="ProfileHeader" customModule="menlog" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="134"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Jxt-mZ-BXC">
-                                            <rect key="frame" x="8" y="-2" width="129" height="128"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <gestureRecognizers/>
-                                        </imageView>
-                                    </subviews>
-                                    <connections>
-                                        <outlet property="profileImage" destination="Jxt-mZ-BXC" id="CB7-dY-ezg"/>
-                                    </connections>
-                                </collectionReusableView>
-                            </collectionView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="95v-za-Wh8"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="マイページ" id="pDX-yJ-7Us"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Cs3-ib-F8C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="6Zr-SK-KTs">
-                    <connections>
-                        <action selector="pickProfileImage:" destination="JVE-Ci-QBf" id="tHB-7q-pDj"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <viewControllerPlaceholder storyboardName="MypageViewController" id="sbT-Hf-0zs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="KXW-eT-pTH"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7u7-de-iBa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5305.7971014492759" y="1429.6875"/>
-        </scene>
-        <!--Mypage-->
-        <scene sceneID="2PT-HG-Wxi">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KvI-LD-T81" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Mypage" image="person" catalog="system" id="wBd-jL-LEV"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WKQ-05-XEa">
-                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="JVE-Ci-QBf" kind="relationship" relationship="rootViewController" id="hPJ-9I-hbJ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FX2-Qb-6ck" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4395.652173913044" y="1429.6875"/>
+            <point key="canvasLocation" x="3203" y="327"/>
         </scene>
         <!--EULAViewController-->
         <scene sceneID="mXV-8F-hAk">
@@ -568,9 +466,6 @@
         <segue reference="tP0-3o-79O"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="mappin.and.ellipse" catalog="system" width="117" height="128"/>
-        <image name="person" catalog="system" width="128" height="121"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

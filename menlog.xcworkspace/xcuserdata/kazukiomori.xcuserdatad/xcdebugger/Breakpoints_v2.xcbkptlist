@@ -498,7 +498,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C51A3D63-9653-48D0-AAE5-BEF043071245"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "menlog/ViewController/FeedViewController.swift"
@@ -1567,7 +1567,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A242F7A6-8AC9-4306-BDC9-AE82355F5B75"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "menlog/ViewController/FeedViewController.swift"
@@ -1583,7 +1583,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "5B8AFAEE-C37E-4BC8-9747-019B7499F72F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "menlog/ViewController/FeedViewController.swift"
